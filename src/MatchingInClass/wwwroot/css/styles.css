@@ -4,6 +4,7 @@
   background-color: white;
 }
 
-h3 {
-  color: red;
+#page1 {
+  width: 800px;
+  background-color: red;
 }

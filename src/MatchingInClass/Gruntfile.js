@@ -17,13 +17,21 @@ module.exports = function (grunt) {
 		less: {
 			development: {
 				options: {
-					paths: ["Assets"],
+					paths: ["assets"],
 				},
 				files: { "wwwroot/css/styles.css": "assets/*.less" }
 			},
+		},
+		watch: {
+			less: {
+				// We watch and compile less files as normal but don't live reload here 
+				files: ['assets/*.less'],
+				tasks: ['less'],
+			}
 		}
 	});
 	grunt.registerTask("default", ["bower:install"]);
 	grunt.loadNpmTasks("grunt-bower-task");
 	grunt.loadNpmTasks("grunt-contrib-less");
+	grunt.loadNpmTasks("grunt-contrib-watch");
 };

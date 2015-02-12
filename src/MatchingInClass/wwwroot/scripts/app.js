@@ -1,7 +1,7 @@
 ﻿(function () {
 	var app = angular.module("app", []);
 	
-	app.controller('GameController', function () {
-		this.title = "Angular and VS15 is awesome";
+	app.controller('GameController', function ($scope) {
+		this.tileNames = ['8-ball', 'baked-potato', 'dinosaur', 'kronos', 'rocket', 'that-guy', 'zeppelin', 'cards'];
 	});
 })();

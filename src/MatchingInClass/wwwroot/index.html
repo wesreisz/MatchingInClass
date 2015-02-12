@@ -4,19 +4,22 @@
 <head>
     <meta charset="utf-8" />
     <title></title>
-	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap-theme.css" />
-	<link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css" />
+	<link rel="stylesheet" href="lib/bootstrap/bootstrap.css" />
 	<link rel="stylesheet" href="css/styles.css" />
 	<script type="text/javascript" src="lib/jquery/jquery.js"></script>
-	<script type="text/javascript" src="lib/bootstrap/js/bootstrap.js"></script>
+	<script type="text/javascript" src="lib/bootstrap/bootstrap.js"></script>
 	<script type="text/javascript" src="lib/angular/angular.js"></script>
 	<script type="text/javascript" src="scripts/app.js"></script>
 
 </head>
 <body>
 	<div class="container" id="page1" ng-controller="GameController as cntl">
-		<h3>{{cntl.title}}</h3>
-
+		<h3>{{game.title}}</h3>
+		<div class="board">
+			<span ng-repeat="tile in cntl.tileNames" class="tile">
+				<image src="img/{{tile}}.png" alt="{{tile}}" />
+			</span>
+		</div>
 	</div>
 	
 </body>
